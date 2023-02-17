@@ -1,0 +1,8 @@
+- Brièvement, on peut remarquer que plus le seuil augmente plus on détecte de nombreuses classes suspectées d'être divines.
+- On a considéré deux métriques importantes pour la classe Egon, en premier Nvloc qui nous permet de voir le nombre de ligne de code dans un fichier java et en deuxième Icsec qui nous permet de calculer le csec qui correspond au couplage simple entre les classes.
+  L'heuristique d'Egon nous permet d'identifier les problèmes de modularité, selon le seuil passé en paramètre.
+  Exemple, pour un seuil de 1%, on remarque qu'aucune classe n'a ete identifie comme suspecte. Contrairement a un seuil de 5%, six classes sont suspectes d'etre divines et pour un seul de 10% , 13 classes sont suspectes.
+  On remarque qu plus on augmente le seuil plus on a de classes suspectes dites divines. Cela dit, ca nous indique aussi un problème de modularité, étant donne que le niveau de couplage entre ces classes est le plus éleves.
+  ca constitue un problème vue qu'on essaye de toujours favoriser la cohesion des classes entre elles plutot que le couplage, car un fort couplage entre plusieurs classes les rend dépendantes les unes des autres et la maintenabilite du code va etre beaucoup plus difficile.
+  - Une facon d'améliorer ca et d'ajouter une métrique qui nous permet de détecter la cohesion entre les modules. De ce fait, ca nous permetterais de voir si il y a un faible couplage au sein d'un module ou avec d'autres.
+  ca serait un bon indicatif pour comparer faible cohesion et le couplage tel qu'on essaye de favoriser une forte cohesion pour réduire l'interdépendance d'un fort couplage.
